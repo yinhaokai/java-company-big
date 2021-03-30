@@ -1,0 +1,9 @@
+曾经的synchronize人人唾弃，现在的synchronize的万人追捧。当年面试的时候如果你的锁基本上都是用synchronize的，面试官都会问：synchronize如何支持并发，为什么不用reentrantlock。现在，大人时代变了，纵使doung lee都不用自己开发的renentrantlock 做concurrenthashmap的锁，反而转向了synchronize的怀抱。
+
+这是什么原因呢，因为synchronize不是原来那个铁憨憨，现在已经成为篮球场上一个灵活的胖子，能突能投，能防能板，哪里有砖哪里搬。
+
+为什么这么说呢，那现在就带大家一起走进这个从羞涩迈向成熟的灵活胖子--锁界霍大叔--synchronize。
+
+synchronize是一种什么样的锁呢，不同于aqs实现的各种锁都是基于java代码的，synchronize其实不是基于java代码的，人家是jvm虚拟机原生支持的，也就是说他其实不是java语言完全实现的，其底层是通过c++实现。
+
+他的一个别名--监视器锁。同学们一定要注意这个别名。
